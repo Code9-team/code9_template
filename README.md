@@ -99,6 +99,7 @@ export default App
 import React from "react"
 import { useNuiEvent } from "../hooks/useNuiEvent"
 import { useRoute } from './../hooks/useRoute';
+import { debugData } from "../utils/debugData";
 import Home from "./../pages/home"
 import Settings from "./../pages/settings"
 
