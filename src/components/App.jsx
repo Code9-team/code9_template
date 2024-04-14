@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react"
+import React from "react"
 import { useRoute } from './../hooks/useRoute';
 function App() {
   const { route, navigateTo } = useRoute()
