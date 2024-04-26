@@ -35,11 +35,14 @@ Sunucuyu çalıştırın
 ```javascript
 import React from "react"
 import { useRoute } from './../hooks/useRoute';
+import Home from './../pages/home';
+import Settings from './../pages/settings';
 function App() {
   const { route, navigateTo } = useRoute()
   return (
     <>
-      {route}
+      {route === "home" && <Home />}
+      {route === "settings" && <Settings />}
     </>
   )
 }
@@ -218,6 +221,28 @@ function Home() {
         <>
             <h1> {language.home} </h1>
             <p> {data.home.description} </p>
+        </>
+     );
+}
+
+export default Home;
+```
+
+## uiData
+
+```javascript
+import { useLanguage } from './../hooks/useLanguage';
+import { useData } from './../hooks/useData';
+import { postNui } from './../utils/postNui';
+function Home() {
+    const { language } = useLanguage();
+    const { data, uiData, setUiData } = useData();
+    postNui("myPostEvent", "Gidecek Data"); 
+    return ( 
+        <>
+            <h1> {language.home} </h1>
+            <p> {data.home.description} </p>
+            <p> {uiData.uiData} </p>
         </>
      );
 }

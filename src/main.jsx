@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <RouterProvider>
         <DataProvider>
           <LanguageProvider>
-            <App />
+              <App />
           </LanguageProvider>
         </DataProvider>
       </RouterProvider>

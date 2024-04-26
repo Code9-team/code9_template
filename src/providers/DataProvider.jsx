@@ -39,8 +39,12 @@ export const DataProvider = ({ children }) => {
     }))
   })
 
+  const [uiData, setUiData] = useState({
+    uiData: "Only UI Data"
+  })
+
   return (
-    <DataContext.Provider value={{ data, setData }}>
+    <DataContext.Provider value={{ data, setData, uiData, setUiData }}>
       {children}
     </DataContext.Provider>
   )
