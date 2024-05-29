@@ -1,8 +1,5 @@
 import React, {
-  Context,
   createContext,
-  useContext,
-  useEffect,
   useState,
 } from "react"
 import { useNuiEvent } from "../hooks/useNuiEvent"
@@ -30,13 +27,13 @@ export const DataProvider = ({ children }) => {
   })
 
   useNuiEvent("CHANGE_HOME_DESC", (data) => {
-    setData((prev) => ({
-      ...prev,
+    setData({
+      ...data,
       home: {
-        ...prev.home,
+        ...data.home,
         description: data,
       },
-    }))
+    })
   })
 
   const [uiData, setUiData] = useState({
