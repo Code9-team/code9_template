@@ -1,3 +1,8 @@
+:root{ 
+    --font-bebas: 'Bebas Neue', sans-serif;
+    --font-satoshi: 'Satoshi', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
