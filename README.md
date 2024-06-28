@@ -249,3 +249,16 @@ function Home() {
 
 export default Home;
 ```
+
+## useUiEvent
+
+useNuiEvent'leri ui üzerinden çalıştırmak için ui'ya message gönderir. Bu sayede iki dosya üzerindeki fonksiyonları rahatça çalıştırabiliriz.
+
+```javascript
+  useUiEvent([
+    {
+      action: "CHANGE_HOME_DESC",
+      data: "Gelene data",
+    },
+  ])
+```
