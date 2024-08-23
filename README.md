@@ -9,7 +9,7 @@
 Projeyi klonlayın
 
 ```bash
-  npx degit https://github.com/Dusa-Team/dusa_template my-project
+  npx degit https://github.com/Dusa-Team/code9_template my-project
 ```
 
 Proje dizinine gidin
